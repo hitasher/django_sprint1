@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<article>
+    <h2>{{ post.location }}</h2>
+    <ul>
+        <li><strong>Место:</strong> {{ post.location }}</li>
+        <li><strong>Дата:</strong> {{ post.date }}</li>
+        <li><strong>Категория:</strong> {{ post.category }}</li>
+    </ul>
+    <p>{{ post.text }}</p>
+</article>
+<a href="{% url 'blog:index' %}">Назад к ленте записей</a>
+{% endblock %}
